@@ -1,0 +1,292 @@
+body {
+    background-color:       darkred;
+    color:                  gold;
+    margin:                 0;
+    padding:                0;
+    font-family:            Arial, sans-serif;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+body a {
+    color:                  gold;
+    text-decoration:        none;
+}
+
+/* Navigation styling */
+#nav {
+    height:                 18vh;  /* Reduced height to bring it up */
+    margin-bottom:          15px;  /* Less space between navigation and hero section */
+    padding-bottom:         15px;  /* Adjust padding for better alignment */
+    position:               relative;
+    z-index:                10; /* Ensures nav is on top of the hero section */
+}
+
+.headElement {
+    display:                flex;
+    justify-content:        space-between;
+    align-items:            center;
+    padding:                15px;  /* Adjusted padding */
+}
+
+.headElement h1 {
+    text-align:             center;
+    font-size:              2em;
+    color:                  gold;
+    margin:                 0;
+}
+
+#logoTop {
+    width:                  8vw;
+    height:                 auto;
+    border-radius:          15px;
+}
+
+#searchBar {
+    width:                  30vw;
+    border-left:            3px solid gold;
+    background-color:       rgb(255, 255, 255);
+    text-align:             center;
+    padding:                8px;
+    color:                  darkred;
+}
+
+#menu {
+    display:                flex;
+    justify-content:        space-evenly;
+    text-align:             center;
+    font-size:              large;
+    flex-wrap:              wrap;
+    margin-top:             20px;
+    position:               relative;
+    z-index:                10; /* Ensures menu is above hero image */
+}
+
+#menu a {
+    padding: 10px;
+    margin: 0 15px;
+    color: gold;
+    font-weight: bold;
+    border:                 2px solid gold;
+    border-radius:          5px;
+}
+
+#menu a:hover {
+    background-color:       gold;
+    color:                  darkred;
+}
+
+/* Hero section */
+#hero {
+    height:                 30vh;  /* Reduced height to bring the hero image up */
+    display:                flex;
+    flex-direction:         row;
+    align-items:            center;
+    justify-content:        space-between;
+    margin-bottom:          30px;
+    position:               relative;
+    z-index:                1; /* Ensures the hero section is behind the nav */
+}
+
+.heroImgs {
+    height:                 100%;
+    width:                  60%;
+    object-fit:             cover;
+    border-right:           3px solid gold;
+    border-radius:          10px;
+}
+
+#contact {
+    text-align:             center;
+    width:                  35%;
+    padding-left:           20px;
+    color:                  gold;
+}
+
+#contact p {
+    margin-bottom:          10px;
+}
+
+#contact h2 {
+    margin-bottom:          20px;
+    font-size:              1.5em;
+    font-weight:            bold;
+}
+
+/* Skills + Resume section */
+#skillsPlusResume {
+    display:                flex;
+    justify-content:        space-between;
+    margin-bottom:          30px;
+}
+
+#skills {
+    width:                  48%;
+    border-right:           3px solid gold;
+    padding-right:          20px;
+    border-radius:          10px;
+    background-color:       rgba(255, 255, 255, 0.8);
+    color:                  darkred; /* Changed to darkred */
+}
+
+#skills ul {
+    list-style-type:        none;
+    padding:                0;
+    margin:                 0;
+}
+
+#skills li {
+    margin-bottom:          15px;
+}
+
+#resume {
+    width:                  48%;
+    text-align:             center;
+    background-color:       rgba(255, 255, 255, 0.8);
+    padding:                15px;
+    border-radius:          10px;
+    color:                  darkred; /* Changed to darkred */
+}
+
+#downloadSym {
+    font-size:              40px;
+    text-decoration:        underline;
+    margin-bottom:          15px;
+    color:                  darkred;
+    background-color:       transparent;
+    border-color:           transparent;
+}
+
+#resumeLink {
+    color:                  darkred;
+    font-weight:            bold;
+    font-size:              1.2em;
+}
+
+#resumeLink:hover {
+    text-decoration:        underline;
+    color:                  gold;
+}
+
+/* Footer */
+#footerLogo {
+    height:                 100%;
+    border-radius:          15px;
+}
+
+.footerMenuItems {
+    display:                flex;
+    justify-content:        space-evenly;
+    width:                  100%;
+    margin-top:             15px;
+}
+
+#copyRightStuff {
+    text-align:             center;
+    padding:                10px;
+    color:                  gold;
+}
+
+/* Responsive styling for tablets and smaller screens */
+@media (max-width: 1024px) {
+    .headElement h1 {
+        font-size: 1.5em;
+    }
+
+    #searchBar {
+        width: 70%;
+    }
+
+    #logoTop {
+        width: 10vw;
+    }
+
+    #menu {
+        font-size: medium;
+    }
+
+    #hero {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .heroImgs {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    #skillsPlusResume {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #skills, #resume {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Responsive styling for mobile screens */
+@media (max-width: 768px) {
+    .headElement {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .headElement h1 {
+        font-size: 1.2em;
+        margin-bottom: 15px;
+    }
+
+    #logoTop {
+        width: 15vw;
+    }
+
+    #searchBar {
+        width: 90%;
+        margin-top: 10px;
+    }
+
+    #menu {
+        flex-direction: column;
+        font-size: small;
+        text-align: center;
+    }
+
+    #hero {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    .heroImgs {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        margin-bottom: 20px;
+    }
+
+    #skillsPlusResume {
+        flex-direction: column;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    #skills, #resume {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #footerMenu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footerMenuItems {
+        justify-content: center;
+    }
+
+    #copyRightStuff {
+        position: relative;
+    }
+}
